@@ -33,7 +33,7 @@ void main()
     else
     {
         printf("\n%d is smallest", c);
-        small = b;
+        small = c;
     }
     if (large % 2 == 0)
     {
