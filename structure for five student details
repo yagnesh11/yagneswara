@@ -1,0 +1,60 @@
+#include <stdio.h>
+struct student 
+{
+    char firstName[50];
+    int roll;
+    float test1marks;
+    float test2marks;
+    float test3marks;
+    float test4marks;
+    float test5marks;
+    int total;
+    int average;
+    
+} s[5];
+
+int main()
+ {
+    int i;
+    printf("Enter information of students:\n");
+    for (i = 0; i < 5; ++i) {
+        s[i].roll = i + 1;
+        printf("\nFor roll number%d,\n", s[i].roll);
+        printf("Enter first name: ");
+        scanf("%s", s[i].firstName);
+        
+        printf("Enter test -1 marks: ");
+        scanf("%f", &s[i].test1marks);
+        
+        printf("Enter test -2 marks: ");
+        scanf("%f", &s[i].test2marks);
+        
+        printf("Enter test -3 marks: ");
+        scanf("%f", &s[i].test3marks);
+        
+        printf("Enter test -4 marks: ");
+        scanf("%f", &s[i].test4marks);
+        
+        printf("Enter test -5 marks: ");
+        scanf("%f", &s[i].test5marks);
+        
+        s[i].total = s[i].test1marks + s[i].test2marks + s[i].test3marks + s[i].test4marks + s[i].test5marks;
+    
+        s[i].average = s[i].total/5; 
+    }
+    printf("Displaying Information:\n\n");
+    for (i = 0; i < 5; ++i) {
+        printf("\nRoll number: %d\n", i + 1);
+        printf("First name: ");
+        puts(s[i].firstName);
+        printf("Marks: %.1f\n", s[i].test1marks);
+        printf("Marks: %.1f\n", s[i].test2marks);
+        printf("Marks: %.1f\n", s[i].test3marks);
+        printf("Marks: %.1f\n", s[i].test4marks);
+        printf("Marks: %.1f\n", s[i].test5marks);
+        printf("Total marks :%d\n",s[i].total);
+        printf("Average marks :%2f\n",s[i].average);
+        printf("\n");
+    }
+    return 0;
+}
