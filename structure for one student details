@@ -1,0 +1,57 @@
+#include <stdio.h>
+struct student
+{
+    char name[50];
+    int roll;
+    float test1marks;
+    float test2marks;
+    float test3marks;
+    float test4marks;
+    float test5marks;
+    int total;
+    float average;
+};
+int main()
+{
+    struct student s;
+    
+ printf("Enter The Information of Students :\n\n");
+    
+ printf("Enter Name : ");
+    scanf("%s",s.name);
+    
+ printf("Enter Roll No. : ");
+    scanf("%d",&s.roll);
+    
+    printf("Enter test-1 marks : ");
+    scanf("%f",&s.test1marks);
+    
+     printf("Enter test-2 marks : ");
+    scanf("%f",&s.test2marks);
+    
+     printf("Enter test-3 marks : ");
+    scanf("%f",&s.test3marks);
+    
+     printf("Enter test-4 marks : ");
+    scanf("%f",&s.test4marks);
+    
+     printf("Enter test-5 marks : ");
+    scanf("%f",&s.test5marks);
+    
+    s.total = s.test1marks + s.test2marks + s.test3marks + s.test4marks + s.test5marks;
+    
+    s.average = s.total/5;
+    
+    printf("\nDisplaying Information\n");
+    
+ printf("Name: %s\n",s.name);
+    printf("Roll: %d\n",s.roll);
+    printf("Test-1 marks: %.2f\n",s.test1marks);
+    printf("Test-2 marks: %.2f\n",s.test2marks);
+    printf("Test-3 marks: %.2f\n",s.test3marks);
+    printf("Test-4 marks: %.2f\n",s.test4marks);
+    printf("Test-5 marks: %.2f\n",s.test5marks);
+    printf("Total marks :%d\n",s.total);
+    printf("Average marks :%2f\n",s.average);
+    return 0;
+}
