@@ -1,0 +1,23 @@
+#include<stdio.h>                                                               
+                                                                                                                                                                                                                                                                          
+void main()                                                                     
+{                                                                               
+  int i, j, a, b;                                                              
+  int composite = 0;                                                            
+  printf("Enter two numbers: ");                                                      
+  scanf("%d%d", &a,&b);                                                          
+                                                                                
+  printf("Composite Numbers between %d and %d: ",a,b);                               
+  for(i = a;i <= b;i++)                                                     
+  {                                                                             
+    composite = 0;                                                              
+    for(j = i-1; j > 1 ; j--)                                                   
+    {                                                                           
+       if(i%j == 0)                                                             
+         composite = 1;                                                         
+    }                                                                           
+    if(composite == 1)                                                          
+     printf("%d, ", i);                                                         
+  }                                                                             
+  printf("\n");                                                                 
+}          
