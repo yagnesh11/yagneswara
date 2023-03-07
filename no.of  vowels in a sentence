@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() 
+{
+  char line[1000];
+  int i=0,count = 0;
+  printf("Enter the statement: ");
+  gets(line);
+  while(line[i] != '\0')
+    {
+    if (line[i] == 'a' || line[i] == 'e' || line[i] == 'i' || line[i] == 'o' || line[i] == 'u' || 
+        line[i] == 'A' || line[i] == 'E' || line[i] == 'I' || line[i] == 'O' || line[i] == 'U') 
+      count++;
+      i++;
+     }
+         printf("the no.of vowels in the stentence : %d",count);
+  }
