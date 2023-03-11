@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+   int num[100],i,n,count=0;
+   
+  printf("Enter the no.on integers: ");
+  scanf("%d", &n);
+   
+   for(i= 0; i < n; ++i)
+    {
+         printf("Enter number %d :",i+1);
+         scanf("%d",&num[i]);
+      if( num[i] < 0)
+      count++;
+       
+   }
+   
+   printf("no.on negative element in given array is %d",count);   
+   
+   return 0;
+}
